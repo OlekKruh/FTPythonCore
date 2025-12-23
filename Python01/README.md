@@ -9,7 +9,7 @@
 
 **Filmed on location at:**
 
-![42 Warsaw](https://img.shields.io/badge/42-Warsaw-000000?style=for-the-badge&logo=42&logoColor=white)
+![42 Warsaw](https://img.shields.io/badge/-Warsaw-000000?style=for-the-badge&logo=42&logoColor=white)
 
 **Starring:**
 
@@ -72,8 +72,8 @@ CodeCultivation/
 ### Installation
 1. Clone the repository:
 2. Navigate to the specific exercise folder to run individual simulations.
-3. > [!NOTE]
-   > Ensure you have Python 3.10 installed.
+> [!NOTE]
+> Ensure you have Python 3.10 installed.
 
 ## Resources & AI
 ### Resources

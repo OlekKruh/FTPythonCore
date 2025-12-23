@@ -10,11 +10,7 @@ contributing to sustainable community initiatives.A Python-based maze generator 
 ## Table of Contents
 1. [Description](#description)
 2. [Instructions](#instructions)
-3. [Configuration](#configuration)
-4. [Algorithm Details](#algorithm)
-5. [Code Reusability](#code-reusability)
-6. [Team & Management](#team-and-project-management)
-7. [Resources & AI](#resources)
+3. [Resources & AI](#resources)
 
 ---
 
