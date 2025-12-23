@@ -9,12 +9,12 @@
 
 **Filmed on location at:**
 
-![42 Warsaw](https://img.shields.io/badge/-Warsaw-000000?style=for-the-badge&logo=42&logoColor=white)
+![42 Warsaw](https://img.shields.io/badge/-Warsaw-blue?style=for-the-badge&logo=42&logoColor=black&labelColor=white)
 
 **Starring:**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
-![PyCharm](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=pycharm&logoColor=white)
+![PyCharm on Mac](https://img.shields.io/badge/-PyCharm-blue?style=for-the-badge&logo=apple&logoColor=white&labelColor=gray)
 
 **Powered by:**
 
@@ -24,7 +24,7 @@
 
 **QA Department:**
 
-![Works on My Machine](https://img.shields.io/badge/Works_on-My_Machine-success?style=for-the-badge&logo=apple&logoColor=white)
+![Works on My Machine](https://img.shields.io/badge/Works_on-My_Machine-success?style=for-the-badge)
 
 >Build a comprehensive digital garden ecosystem while discovering advanced
 Python concepts. Create tools to manage community gardens efficiently through
@@ -36,7 +36,7 @@ data-driven approaches.
 3. [Instructions](#instructions)
 4. [Resources & AI](#resources--ai)
 ---
-<h2 align="center">Description</h2>
+## Description
 **Goal:**
 The project aims to introduce the Object-Oriented constructs of Python (OOP),
 evolving from simple scripts to a complex system of interacting classes.

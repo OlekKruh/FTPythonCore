@@ -1,4 +1,9 @@
-*This project has been created as part of the 42 curriculum by okruhlia.*
+> [!NOTE]
+> This project has been created as part of the [__42 Warsaw__](https://42warsaw.pl/pl/) curriculum by [_okruhlia_](https://www.linkedin.com/in/oleksij-kruhlianytsia-1844a8286?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUAE5tKFeTtCh4licBCi%2BjA%3D%3D).
+
+> [!WARNING]
+> *The accuracy of the information or implementation may not correspond to reality.*
+> ___USE AT YOUR OWN RISK!___
 
 # Growing Code
 > Discover Python’s fundamental syntax and semantics through analyzing
