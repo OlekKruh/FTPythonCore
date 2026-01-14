@@ -30,7 +30,7 @@ def test_watering_system() -> None:
         In both cases, 'Closing watering system' must be printed.
     """
     good_list = ["tomato", "lettuce", "carrots"]
-    bad_list = ["tomato", None]
+    bad_list = ["tomato", None, "cactus"]
 
     print("Testing normal watering...")
     water_plants(good_list)
