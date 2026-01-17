@@ -1,9 +1,3 @@
-"""
-
-
-record_spell("Lightning", "air"): Spell recorded: Lightning (air - VALID)
-
-"""
 from alchemy.grimoire import validate_ingredients, record_spell
 
 print("=== Circular Curse Breaking ===")
@@ -19,6 +13,7 @@ print(f"record_spell(\"Dark Magic\", \"shadowf\"): "
       f"{record_spell("Dark Magic", "shadowf")}")
 print()
 print("Testing late import technique:")
+
 
 from alchemy.grimoire import record_spell as rec
 print(f"record_spell(\"Lightning\", \"air\"): "
