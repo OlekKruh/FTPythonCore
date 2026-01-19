@@ -17,7 +17,8 @@ class InputStage:
     def process(self, data: Union[Dict[str, str], List[str], Any]) -> Any:
         """Validates and parses raw input data for display.
         Args:
-            data (Union[Dict[str, str], List[str], Any]): Raw input data structure.
+            data (Union[Dict[str, str], List[str], Any]):Raw
+            input data structure.
         Returns:
             Any: The passed-through data after validation logging.
         """
@@ -92,7 +93,8 @@ class JSONAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
-        """Handle format-specific logging and delegate to base pipeline processing.
+        """Handle format-specific logging and delegate to
+         base pipeline processing.
         Args:
             data (Any): The raw input data specific to this adapter format.
         Returns:
@@ -108,7 +110,8 @@ class CSVAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
-        """Handle format-specific logging and delegate to base pipeline processing.
+        """Handle format-specific logging and delegate to base
+        pipeline processing.
         Args:
             data (Any): The raw input data specific to this adapter format.
         Returns:
@@ -124,7 +127,8 @@ class StreamAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
-        """Handle format-specific logging and delegate to base pipeline processing.
+        """Handle format-specific logging and delegate to base
+        pipeline processing.
         Args:
             data (Any): The raw input data specific to this adapter format.
         Returns:
@@ -144,7 +148,8 @@ class NexusManager:
     def add_pipeline(self, pipeline: ProcessingPipeline) -> None:
         """Register a configured pipeline with the manager.
         Args:
-            pipeline (ProcessingPipeline): A fully configured pipeline instance.
+            pipeline (ProcessingPipeline): A fully configured pipeline
+            instance.
         """
         self.pipelines.append(pipeline)
 
