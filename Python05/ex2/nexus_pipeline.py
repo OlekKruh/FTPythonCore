@@ -4,11 +4,23 @@ from typing import Any, List, Dict, Union, Optional, Protocol
 
 class ProcessingStage(Protocol):
     def process(self, data: Any) -> Any:
+        """Defines the interface for data processing.
+        Args:
+            data (Any): The input data to process.
+        Returns:
+            Any: The processed output data.
+        """
         ...
 
 
 class InputStage:
     def process(self, data: Union[Dict[str, str], List[str], Any]) -> Any:
+        """Validates and parses raw input data for display.
+        Args:
+            data (Union[Dict[str, str], List[str], Any]): Raw input data structure.
+        Returns:
+            Any: The passed-through data after validation logging.
+        """
         if isinstance(data, dict):
             import json
             print(f"Input: {json.dumps(data)}")
@@ -19,6 +31,12 @@ class InputStage:
 
 class TransformStage:
     def process(self, data: Any) -> Any:
+        """Applies business logic and data enrichment rules.
+        Args:
+            data (Any): Validated data from the input stage.
+        Returns:
+            Any: Transformed data string or original data if no rule matches.
+        """
         print("Transform: Enriched with metadata and validation")
 
         if isinstance(data, dict) and "sensor" in data:
@@ -33,6 +51,12 @@ class TransformStage:
 
 class OutputStage:
     def process(self, data: Any) -> Any:
+        """Formats and delivers the final pipeline result.
+        Args:
+            data (Any): The transformed data ready for output.
+        Returns:
+            Any: The final data passed through the pipeline.
+        """
         print(f"Output: {data}")
         return data
 
@@ -42,10 +66,20 @@ class ProcessingPipeline(ABC):
         self.stages: List[Any] = []
 
     def add_stage(self, stage: Any) -> None:
+        """Register a processing stage step in the pipeline.
+        Args:
+            stage (Any): An object adhering to the ProcessingStage protocol.
+        """
         self.stages.append(stage)
 
     @abstractmethod
     def process(self, data: Any) -> Any:
+        """Execute all registered stages sequentially on the input data.
+        Args:
+            data (Any): The initial input data.
+        Returns:
+            Any: The final result after passing through all stages.
+        """
         current_data = data
         for stage in self.stages:
             current_data = stage.process(current_data)
@@ -58,6 +92,12 @@ class JSONAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
+        """Handle format-specific logging and delegate to base pipeline processing.
+        Args:
+            data (Any): The raw input data specific to this adapter format.
+        Returns:
+            Any: The processed result from the pipeline.
+        """
         print("Processing JSON data through pipeline...")
         return super().process(data)
 
@@ -68,6 +108,12 @@ class CSVAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
+        """Handle format-specific logging and delegate to base pipeline processing.
+        Args:
+            data (Any): The raw input data specific to this adapter format.
+        Returns:
+            Any: The processed result from the pipeline.
+        """
         print("Processing CSV data through same pipeline...")
         return super().process(data)
 
@@ -78,6 +124,12 @@ class StreamAdapter(ProcessingPipeline):
         self.pipeline_id = pipeline_id
 
     def process(self, data: Any) -> Any:
+        """Handle format-specific logging and delegate to base pipeline processing.
+        Args:
+            data (Any): The raw input data specific to this adapter format.
+        Returns:
+            Any: The processed result from the pipeline.
+        """
         print("Processing Stream data through same pipeline...")
         return super().process(data)
 
@@ -90,9 +142,20 @@ class NexusManager:
         self.pipelines: List[ProcessingPipeline] = []
 
     def add_pipeline(self, pipeline: ProcessingPipeline) -> None:
+        """Register a configured pipeline with the manager.
+        Args:
+            pipeline (ProcessingPipeline): A fully configured pipeline instance.
+        """
         self.pipelines.append(pipeline)
 
     def process_data(self, data: Any, pipeline_id: str) -> Optional[Any]:
+        """Route data to the correct pipeline based on ID.
+        Args:
+            data (Any): The data to be processed.
+            pipeline_id (str): The identifier of the target pipeline.
+        Returns:
+            Optional[Any]: The processing result or None if pipeline not found.
+        """
         for pipeline in self.pipelines:
             if getattr(pipeline, "pipeline_id", "") == pipeline_id:
                 return pipeline.process(data)
