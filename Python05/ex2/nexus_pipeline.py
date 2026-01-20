@@ -153,6 +153,10 @@ class NexusManager:
         """
         self.pipelines.append(pipeline)
 
+
+
+
+
     def process_data(self, data: Any, pipeline_id: str) -> Optional[Any]:
         """Route data to the correct pipeline based on ID.
         Args:
