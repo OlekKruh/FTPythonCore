@@ -57,7 +57,8 @@ class TournamentPlatform:
 
         leaderboard = []
         for card in sorted_cards:
-            info = f"{card.name} - Rating: {card.rating} ({card.wins}-{card.losses})"
+            info = (f"{card.name} - Rating: "
+                    f"{card.rating} ({card.wins}-{card.losses})")
             leaderboard.append(info)
         return leaderboard
 
