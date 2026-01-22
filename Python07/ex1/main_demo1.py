@@ -1,8 +1,6 @@
-from ex0.CreatureCard import CreatureCard
-from ex1.SpellCard import SpellCard
-from ex1.ArtifactCard import ArtifactCard
-from ex1.Deck import Deck
-from tools.card_generator import CardGenerator
+from ex0 import CreatureCard
+from ex1 import SpellCard, ArtifactCard, Deck
+from tools import CardGenerator
 
 
 generator = CardGenerator()

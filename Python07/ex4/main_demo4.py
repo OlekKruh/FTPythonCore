@@ -1,5 +1,4 @@
-from ex4.TournamentPlatform import TournamentPlatform
-from ex4.TournamentCard import TournamentCard
+from ex4 import TournamentPlatform, TournamentCard
 
 
 def main():

@@ -8,6 +8,8 @@ print(f"validate_ingredients(\"fire air\"): "
 print(f"validate_ingredients(\"dragon scalesf\"): "
       f"{validate_ingredients("dragon scales")}")
 print()
+
+
 print("Testing spell recording with validation:")
 print(f"record_spell(\"Fireball\", \"fire air\"): "
       f"{record_spell("Fireball", "fire air")}")

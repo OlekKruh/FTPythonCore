@@ -1,5 +1,5 @@
 import random
-from ex0.Card import Card
+from ex0 import Card
 
 
 class Deck:

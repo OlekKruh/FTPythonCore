@@ -1,7 +1,5 @@
-from ex0.Card import Card
-from ex0.CreatureCard import CreatureCard
-from ex1.SpellCard import SpellCard
-from ex1.ArtifactCard import ArtifactCard
+from ex0 import Card, CreatureCard
+from ex1 import SpellCard, ArtifactCard
 from tools.card_generator import CardGenerator
 from .CardFactory import CardFactory
 
@@ -11,17 +9,20 @@ class FantasyCardFactory(CardFactory):
         self.generator = CardGenerator()
 
     def create_creature(self, name_or_power: str | int | None = None) -> Card:
-        name = name_or_power if isinstance(name_or_power, str) else "Goblin Warrior"
+        name = (name_or_power if isinstance(name_or_power, str)
+                else "Goblin Warrior")
         data = self.generator.get_creature(name)
         return CreatureCard(**data)
 
     def create_spell(self, name_or_power: str | int | None = None) -> Card:
-        name = name_or_power if isinstance(name_or_power, str) else "Lightning Bolt"
+        name = (name_or_power if isinstance(name_or_power, str)
+                else "Lightning Bolt")
         data = self.generator.get_spell(name)
         return SpellCard(**data)
 
     def create_artifact(self, name_or_power: str | int | None = None) -> Card:
-        name = name_or_power if isinstance(name_or_power, str) else "Mana Crystal"
+        name = (name_or_power if isinstance(name_or_power, str)
+                else "Mana Crystal")
         data = self.generator.get_artifact(name)
         return ArtifactCard(**data)
 

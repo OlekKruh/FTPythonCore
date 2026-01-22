@@ -1,8 +1,6 @@
 import inspect
-from ex0.Card import Card
-from ex2.Combatable import Combatable
-from ex2.EliteCard import EliteCard
-from ex2.Magical import Magical
+from ex0 import Card
+from ex2 import Combatable, EliteCard, Magical
 
 
 arcane_warrior = EliteCard(
@@ -19,11 +17,14 @@ def main():
     print("=== DataDeck Ability System ===")
     print()
     print("EliteCard capabilities:")
-    card_methods = [name for name, value in inspect.getmembers(Card, inspect.isfunction)]
+    card_methods = [name for name, value in
+                    inspect.getmembers(Card, inspect.isfunction)]
     print(f"- Card: {card_methods[1:]}")
-    combat_card = [name for name, value in inspect.getmembers(Combatable, inspect.isfunction)]
+    combat_card = [name for name, value in
+                   inspect.getmembers(Combatable, inspect.isfunction)]
     print(f"- Combatable: {combat_card[0:]}")
-    magic_card = [name for name, value in inspect.getmembers(Magical, inspect.isfunction)]
+    magic_card = [name for name, value in
+                  inspect.getmembers(Magical, inspect.isfunction)]
     print(f"- Magical: {magic_card[0:]}")
     print()
     print(f"Playing {arcane_warrior.name} (Elite Card):")

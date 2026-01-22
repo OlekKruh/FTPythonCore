@@ -1,5 +1,5 @@
-from ex0.CreatureCard import CreatureCard
-from tools.card_generator import CardGenerator
+from CreatureCard import CreatureCard
+from tools import CardGenerator
 
 generator = CardGenerator()
 fire_dragon = generator.get_creature("Fire Dragon")

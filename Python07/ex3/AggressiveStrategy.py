@@ -18,7 +18,8 @@ class AggressiveStrategy(GameStrategy):
 
                 if hasattr(card, 'attack'):
                     damage_dealt += card.attack
-                elif hasattr(card, 'effect_type') and card.effect_type == 'damage':
+                elif (hasattr(card, 'effect_type')
+                      and card.effect_type == 'damage'):
                     damage_dealt += 3
 
         return {

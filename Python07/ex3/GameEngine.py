@@ -10,7 +10,8 @@ class GameEngine:
         self.total_damage = 0
         self.cards_created_count = 0
 
-    def configure_engine(self, factory: CardFactory, strategy: GameStrategy) -> None:
+    def configure_engine(self, factory: CardFactory,
+                         strategy: GameStrategy) -> None:
         self.factory = factory
         self.strategy = strategy
 
@@ -44,7 +45,8 @@ class GameEngine:
     def get_engine_status(self) -> dict:
         return {
             "turns_simulated": self.turns_simulated,
-            "strategy_used": self.strategy.get_strategy_name() if self.strategy else "None",
+            "strategy_used": self.strategy.get_strategy_name()
+            if self.strategy else "None",
             "total_damage": self.total_damage,
             "cards_created": self.cards_created_count
         }
