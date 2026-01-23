@@ -6,11 +6,6 @@ location = sys.prefix
 base_location = sys.base_prefix
 xxx = sys.executable
 
-print(xxx)
-print(base_location)
-print(location)
-print()
-
 if location != base_location:
     # --- INSIDE THE CONSTRUCT ---
     print("MATRIX STATUS: Welcome to the construct\n")

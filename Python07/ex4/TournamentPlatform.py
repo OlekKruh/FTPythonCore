@@ -1,9 +1,12 @@
+from ex4 import TournamentCard
+
+
 class TournamentPlatform:
     def __init__(self):
         self.registry = {}
         self.matches_played = 0
 
-    def register_card(self, card) -> str:
+    def register_card(self, card: TournamentCard) -> str:
         base_id = card.name.split()[0].lower()
         card_id = f"{base_id}_001"
 
