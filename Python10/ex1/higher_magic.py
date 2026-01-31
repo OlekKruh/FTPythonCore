@@ -38,13 +38,13 @@ def spell_sequence(spells: List[Callable]) -> Callable:
 def main():
     # Basic Spells
     def cast_fireball(target):
-        return f"🔥 Fireball -> {target}"
+        return f"Fireball -> {target}"
 
     def cast_ice_shard(target):
-        return f"❄️ Ice Shard -> {target}"
+        return f"Ice Shard -> {target}"
 
     def cast_curse(target):
-        return f"💀 Curse -> {target}"
+        return f"Curse -> {target}"
 
     def base_damage(power):
         return power
@@ -52,10 +52,6 @@ def main():
     # Generated Data
     test_values = [8, 24, 21]
     test_targets = ['Dragon', 'Goblin', 'Wizard', 'Knight']
-
-    print("\n" + "=" * 60)
-    print(f"{'🧙 MAGICAL SYSTEM SHOWCASE':^60}")
-    print("=" * 60 + "\n")
 
     # --- 1. TEST: SPELL COMBINER ---
     print("1. SPELL COMBINER (Fire + Ice)")
@@ -112,7 +108,6 @@ def main():
     for target in test_targets:
         result_list = ultimate_combo(target)
         print(f"{target:<10} | {str(result_list):<65}")
-    print("\n" + "=" * 60)
 
 
 if __name__ == "__main__":

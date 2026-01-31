@@ -48,10 +48,6 @@ def main():
     enchantment_types = ['Flowing', 'Radiant', 'Frozen']
     items_to_enchant = ['Wand', 'Cloak', 'Amulet', 'Armor']
 
-    print("\n" + "=" * 50)
-    print(f"{'🔮 SCOPE MYSTERIES: DEMONSTRATION':^50}")
-    print("=" * 50)
-
     # --- 1. MAGE COUNTER TEST ---
     print("\n1. TEST: Mage Counter (Closure State)")
     print("-" * 50)
@@ -120,8 +116,6 @@ def main():
         result = vault['recall'](key)
         status = "✅ FOUND" if result != "Memory not found" else "❌ MISSING"
         print(f"Key: {key:<15} -> Result: {result:<15} ({status})")
-
-    print("\n" + "=" * 50)
 
 
 if __name__ == "__main__":

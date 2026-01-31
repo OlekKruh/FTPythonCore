@@ -46,12 +46,12 @@ def _dispatcher_logic(arg):
 
 @_dispatcher_logic.register(int)
 def _(arg: int):
-    return f"💥 Dealing {arg} damage"
+    return f"Dealing {arg} damage"
 
 
 @_dispatcher_logic.register(str)
 def _(arg: str):
-    return f"✨ Casting enchantment: {arg}"
+    return f"Casting enchantment: {arg}"
 
 
 @_dispatcher_logic.register(list)
@@ -71,10 +71,6 @@ def main():
     operations = ['add', 'multiply', 'max', 'min']
     fibonacci_tests = [17, 15, 16]
     mixed_data = [100, "Invisibility", [10, "Heal"], 50]
-
-    print("\n" + "=" * 50)
-    print(f"{'📜 ANCIENT LIBRARY: ARTIFACTS TEST':^50}")
-    print("=" * 50)
 
     # --- 1. TEST: SPELL REDUCER ---
     print("\n1. ARTIFACT: Spell Reducer (Aggregation)")
@@ -122,8 +118,6 @@ def main():
     for data in mixed_data:
         res = dispatcher(data)
         print(f"Input: {str(data):<20} -> {res}")
-
-    print("\n" + "=" * 50)
 
 
 if __name__ == "__main__":

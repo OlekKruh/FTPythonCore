@@ -86,18 +86,18 @@ def main():
         status = "Accepted" if is_valid else "Rejected"
         print(f"{name:<15} | {status:<15}")
 
-    print()
-    print("=" * 30)
+    print("\n")
     print("Training ground...")
     print()
-    for name, spell, power in zip(mage_names * 2, spell_names * 3, test_powers * 2):
+    for name, spell, power in zip(mage_names * 2,
+                                  spell_names * 3,
+                                  test_powers * 2):
         print(f"Mage {name} try to cast '{spell}' (Power: {power})")
         res = mage_guild.cast_spell(spell_name=spell, power=power)
         if 'Insufficient' in res:
             print(f"   -> Resalt: ⛔ {res}\n")
         else:
             print(f"   -> Resalt: ✅ {res}\n")
-    print("End of exercise")
 
 
 if __name__ == "__main__":

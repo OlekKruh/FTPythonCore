@@ -16,7 +16,7 @@ def mage_stats(mages: list[dict]) -> dict:
     max_p_m = max(mages, key=lambda m: m["power"])
     min_p_m = min(mages, key=lambda m: m["power"])
     sum_p = sum(map(lambda m: m["power"], mages))
-    avr_p = sum_p/len(mages)
+    avr_p = round(sum_p/len(mages), 2)
     res = {
         "max_power": max_p_m["power"],
         "min_power": min_p_m["power"],
